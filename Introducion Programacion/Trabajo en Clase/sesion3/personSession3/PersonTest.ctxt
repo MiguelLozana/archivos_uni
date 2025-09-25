@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=PersonTest
+comment0.text=\r\n\ The\ test\ class\ PersonTest.\r\n\r\n\ @author\ \ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\nEscenarios\ de\ prueba\ \r\n\ 1\ -\ Edad\ entre\ los\ l\u00EDmites\ -\ se\ modifica\r\n\ 2\ -\ Edad\ por\ debajo\ del\ limite\ inferior\ -\ excepcion\r\n\ 3\ -\ Edad\ por\ encima\ del\ limite\ superior\ -\ excepcion\r\n\ 4\ -\ Edad\ en\ limite\ inferior\ -\ excepcion\r\n\ 5\ -\ Edad\ en\ limite\ superior\ -\ excepcion\r\n
+comment1.params=
+comment1.target=void\ setBetweenLimitNameTest()
+comment2.params=
+comment2.target=void\ setunderLimitNameTest()
+comment3.params=
+comment3.target=void\ setOnLimitNameTest()
+comment4.params=
+comment4.target=void\ setNameTest()
+numComments=5
