@@ -21,16 +21,26 @@ public class Tree
      * Le da los valores iniciales llamando a los setters
      */
     public Tree() {
-    setType(DEFAULT_TYPE_OF_TREE);
-    setNumberOfFlowers(DEFAULT_NUMBER_OF_FLOWERS);
-    setNumberOfFuits(DEFAULT_NUMBER_OF_FRUITS);
+        setTypeOfTree(DEFAULT_TYPE_OF_TREE);
+        setNumberOfFlowers(DEFAULT_NUMBER_OF_FLOWERS);
+        setNumberOfFruits(DEFAULT_NUMBER_OF_FRUITS);
+    }
+    /**
+     * Constructor que le da los valores de flores y frutas mediante parametros
+     * @param numberOfFlowers, es el numero de flores que se le asiganara al objeto
+     * @param numberOfFruits, es el numero de furtas que se le asiganara al objeto
+     */
+    public Tree(int numberOfFlowers, int numberOfFruits){
+        this();
+        setNumberOfFlowers(numberOfFlowers);
+        setNumberOfFruits(numberOfFruits);
     }
     
     /**
      * Obtiene el valor del atributo typeOfTree
      * @return Devuelve el valor del atributo typeOfTree
      */
-    public String getType(){
+    public String getTypeOfTree(){
         return typeOfTree;
     }
     /**
@@ -58,32 +68,34 @@ public class Tree
     
     
     /**
-     * Asigna el valor introducido como parametro (newType) a typeOfTree
-     * @param newType sustituye al valor de typeOfTree
+     * Asigna el valor introducido como parametro (typeOfTree) a typeOfTree
+     * @param typeOfTree sustituye al valor de typeOfTree
      */
-    public void setType(String newType){
-        typeOfTree = newType;
+    public void setTypeOfTree(String typeOfTree){
+        this.typeOfTree = typeOfTree ;
     }
    
     /**
-     * Tras llamar al metodo numeroPosiivo() para que compruebe que el número es correcto, asigna el 
-     * valor introducido como parametro (newNumberFlowers) a numberOfFlowers
-     * @param newNumberFlowers sustituye al valor de numberOfFflowers 
+     * Tras llamar al metodo numeroPositivo() para que compruebe que el número es correcto, asigna el 
+     * valor introducido como parametro (numberOfFlowers) a numberOfFlowers
+     * @param numberOfFlowers sustituye al valor de numberOfFlowers 
      */
-    public void setNumberOfFlowers(int newNumberFlowers){
-        numeroPositivo(newNumberFlowers);
-        if (newNumberFlowers<MAX_NUMBER_OF_FLOWERS){
-            numberOfFlowers = newNumberFlowers;
+    public void setNumberOfFlowers(int numberOfFlowers){
+        numeroPositivo(numberOfFlowers);
+        if (numberOfFlowers<=MAX_NUMBER_OF_FLOWERS){
+            this.numberOfFlowers = numberOfFlowers;
+        } else {
+            throw new RuntimeException("El número ha de ser menor o igual que el limite superior");
         }
     }
     /**
      * Tras llamar al metodo numeroPositivo() para que compruebe que el número es correcto, asigna el 
-     * valor introducido como parametro (newNumberFuits) a numberOfFruits
-     * @param newNumberOfFruits sustituye al valor de numberOfFuits
+     * valor introducido como parametro (numberOfFruits) a numberOfFruits
+     * @param numberOfFruits sustituye al valor de numberOfFruits
      */
-    public void setNumberOfFuits(int newNumberFuits){
-        numeroPositivo(newNumberFuits);
-        numberOfFruits = newNumberFuits;
+    public void setNumberOfFruits(int numberOfFruits){
+        numeroPositivo(numberOfFruits);
+        this.numberOfFruits = numberOfFruits;
     }
     
     /**
@@ -102,7 +114,7 @@ public class Tree
      * @return String la cadena con los atributos del objeto
      */
     public String toString(){
-        return getType() + "-" + getMaxFlowers() + "-" + getNumberOfFlowers() + "-" + getNumberOfFruits();
+        return getTypeOfTree() + "-" + getMaxFlowers() + "-" + getNumberOfFlowers() + "-" + getNumberOfFruits();
     }
     
     /**
@@ -112,5 +124,15 @@ public class Tree
         System.out.println("Valores de la propiedades del árbol: " + toString());
     }
     
+    public void water(){
+        if (getNumberOfFlowers() < MAX_NUMBER_OF_FLOWERS){
+            setNumberOfFlowers(getNumberOfFlowers() + 1 );
+        } else {
+            if (getNumberOfFruits() < MAX_NUMBER_OF_FLOWERS){
+            setNumberOfFlowers(getNumberOfFlowers() - 1 );    
+            setNumberOfFruits(getNumberOfFruits() + 1 );
+            }
+        }
+    }
      
 }
