@@ -134,5 +134,23 @@ public class Tree
             }
         }
     }
-     
+    
+    public int gatherFruit(){
+
+        if (getNumberOfFruits() > 0){
+            setNumberOfFruits(getNumberOfFruits()-1);  
+        }
+        return this.numberOfFruits;
+    }
+    
+    public int harvest(){
+        int frutas;
+        if (getNumberOfFruits() > 0){
+            frutas = getNumberOfFruits();
+            setNumberOfFruits(0);  
+        } else{
+            frutas=0;
+        }
+        return frutas;
+    }
 }

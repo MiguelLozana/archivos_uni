@@ -1,9 +1,19 @@
 #BlueJ class context
 comment0.target=TreeTest
-comment0.text=\r\n\ --\ \ Test\ sobre\ el\ metodo\ setNumberOfFlowers\ <br>\r\n\ 1\ -\ Cantidad\ de\ flores\ menor\ del\ limite\ inferior\ \ \ \ \ \ \ ->\ Excepcion\ <br>\r\n\ 2\ -\ Cantidad\ de\ flores\ mayor\ del\ limite\ superior\ \ \ \ \ \ \ ->\ Excepcion<br>\r\n\ 3\ -\ Cantidad\ de\ flores\ igual\ al\ limite\ inferior\ (0)\ \ \ \ ->\ Cambia\ el\ valor<br>\r\n\ 4\ -\ Cantidad\ de\ flores\ igual\ al\ limite\ superior\ (12)\ \ \ ->\ Cambia\ el\ valor<br>\r\n\ 5\ -\ Cantidad\ de\ flores\ dentro\ de\ los\ limites\ \ \ \ \ \ \ \ \ \ \ ->\ Cambia\ el\ valor<br>\r\n\r\n\ --\ \ Test\ sobre\ el\ metodo\ water\ <br>\r\n\ 1\ -\ Flores\ menor\ que\ MAX_NUMBER_OF_FLOWERS\ ->\ +1\ Flor\ <br>\r\n\ 2\ -\ Flores\ igual\ a\ MAX_NUMBER_OF_FLOWERS\ y\ Frutas\ menor\ que\ MAX_NUMBER_OF_FLOWERS\ ->\ -1\ Flor,\ +1\ Fruta<br>\r\n\ 3\ -\ Flores\ igual\ a\ MAX_NUMBER_OF_FLOWERS\ igual\ a\ Frutas\ \ \ \ \ \ \ \ \ \ ->\ \ \ Sin\ cambios<br>\r\n\ 4\ -\ Flores\ igual\ a\ MAX_NUMBER_OF_FLOWERS\ y\ Frutas\ mayor\ que\ MAX_NUMBER_OF_FLOWERS\ \ \ ->Sin\ Cambios<br>\r\n\ \r\n\ @author\ \ Miguel\ Lozana\r\n\ @version\ 27/09/2025\r\n
+comment0.text=\r\n\ --\ \ Test\ sobre\ el\ metodo\ setNumberOfFlowers\ <br>\r\n\ 1\ -\ Cantidad\ de\ flores\ menor\ del\ limite\ inferior\ \ \ \ \ \ \ ->\ Excepcion\ <br>\r\n\ 2\ -\ Cantidad\ de\ flores\ mayor\ del\ limite\ superior\ \ \ \ \ \ \ ->\ Excepcion<br>\r\n\ 3\ -\ Cantidad\ de\ flores\ igual\ al\ limite\ inferior\ (0)\ \ \ \ ->\ Cambia\ el\ valor<br>\r\n\ 4\ -\ Cantidad\ de\ flores\ igual\ al\ limite\ superior\ (12)\ \ \ ->\ Cambia\ el\ valor<br>\r\n\ 5\ -\ Cantidad\ de\ flores\ dentro\ de\ los\ limites\ \ \ \ \ \ \ \ \ \ \ ->\ Cambia\ el\ valor<br>\r\n\r\n\ --\ \ Test\ sobre\ el\ metodo\ water\ <br>\r\n\ 1\ -\ Flores\ menor\ que\ MAX_NUMBER_OF_FLOWERS\ ->\ +1\ Flor\ <br>\r\n\ 2\ -\ Flores\ igual\ a\ MAX_NUMBER_OF_FLOWERS\ y\ Frutas\ menor\ que\ MAX_NUMBER_OF_FLOWERS\ ->\ -1\ Flor,\ +1\ Fruta<br>\r\n\ 3\ -\ Flores\ igual\ a\ MAX_NUMBER_OF_FLOWERS\ igual\ a\ Frutas\ \ \ \ \ \ \ \ \ \ ->\ \ \ Sin\ cambios<br>\r\n\ 4\ -\ Flores\ igual\ a\ MAX_NUMBER_OF_FLOWERS\ y\ Frutas\ mayor\ que\ MAX_NUMBER_OF_FLOWERS\ \ \ ->Sin\ Cambios<br>\r\n\ \r\n\ --\ \ Test\ sobre\ el\ metodo\ gatherFruit()\ <br>\r\n\ 1\ -\ Fruit\ mayor\ que\ 1\ ->\ Disminuye\ 1<br>\r\n\ 2\ -\ Fruit\ igual\ a\ 1\ ->\ Disminuye\ 1,\ frutas\ finales\ 0<br>\r\n\ 3\ -\ Fruit\ igual\ a\ 0\ ->\ No\ disminuye,\ futas\ finales\ 0<br>\r\n\ \r\n\ --\ Test\ sobre\ el\ metodo\ harvest()\ <br>\r\n\ 1\ -\ Frutas\ mayores\ a\ 0\ -\ devuelve\ el\ numero\ de\ frutas\r\n\ 2\ -\ Frutas\ iguales\ a\ 0\ -\ devuevle\ 0\r\n\ @author\ \ Miguel\ Lozana\r\n\ @version\ 27/09/2025\r\n
 comment1.params=
 comment1.target=void\ numberOfFlowersUnderMinim()
 comment1.text=\r\n\ Comprueba\ que\ el\ metodo\ setNumberOfFlowers\ lanza\ excepcion\ si\ el\ valor\ esta\ debajo\ del\ limite\ inferior\r\n
+comment10.params=
+comment10.target=void\ gatherFruitMoreThanOne()
+comment11.params=
+comment11.target=void\ gatherFruitIsOne()
+comment12.params=
+comment12.target=void\ gatherFruitIsCero()
+comment13.params=
+comment13.target=void\ harvestFruitMoreThanCero()
+comment14.params=
+comment14.target=void\ harvestFruitIsCero()
 comment2.params=
 comment2.target=void\ numberOfFlowersAboveMaximum()
 comment2.text=\r\n\ Comprueba\ que\ el\ metodo\ setNumberOfFlowers\ lanza\ excepcion\ si\ el\ valor\ esta\ encima\ del\ limite\ superior\r\n
@@ -24,4 +34,4 @@ comment8.params=
 comment8.target=void\ flowersEqualsMaximunNumberOfFlowersEqualsFruits()
 comment9.params=
 comment9.target=void\ flowersEqualsMaximunNumberOfFlowersLessThanFruits()
-numComments=10
+numComments=15
