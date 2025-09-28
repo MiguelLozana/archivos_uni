@@ -1,9 +1,23 @@
 #BlueJ class context
 comment0.target=PersonTest
-comment0.text=\r\n\ Escenarios\ de\ prueba\ \r\n\ 1\ -\ Edad\ entre\ los\ l\u00EDmites\ -\ se\ modifica\r\n\ 2\ -\ Edad\ por\ debajo\ del\ limite\ inferior\ -\ excepcion\r\n\ 3\ -\ Edad\ por\ encima\ del\ limite\ superior\ -\ excepcion\r\n\ 4\ -\ Edad\ en\ limite\ inferior\ -\ excepcion\r\n\ 5\ -\ Edad\ en\ limite\ superior\ -\ excepcion\r\n\ \r\n\ 6\ -\ Valores\ normales\ -\ Cumple\ perfectamente\r\n\ 7\ -\ Valores\ con\ nombres\ vacios\ ->\ ""\ -\ Cuenta\ los\ nombres\ como\ vacio\ y\ su\ longitud\ es\ 0\r\n\ 8\ -\ Valores\ con\ minusculas\ y\ mayusculas\ -\ Lo\ pone\ todo\ en\ mayusculas\r\n\ 9\ -\ Valores\ con\ acentos\ -\ Respeta\ todos\ los\ acentos\ \r\n\r\n\ @author\ \ Miguel\ Lozana\ \r\n\ @version\ (26/09/2025)\r\n\r\n
+comment0.text=\r\n\ Escenarios\ de\ prueba\ del\ getAge()\r\n\ 1\ -\ Edad\ entre\ los\ l\u00EDmites\ -\ se\ modifica\r\n\ 2\ -\ Edad\ por\ debajo\ del\ limite\ inferior\ -\ excepcion\r\n\ 3\ -\ Edad\ por\ encima\ del\ limite\ superior\ -\ excepcion\r\n\ 4\ -\ Edad\ en\ limite\ inferior\ -\ excepcion\r\n\ 5\ -\ Edad\ en\ limite\ superior\ -\ excepcion\r\n\r\n\ --\ Test\ getHashCode\ --\r\n\ 6\ -\ Valores\ normales\ -\ Cumple\ perfectamente\r\n\ 7\ -\ Valores\ con\ nombres\ vacios\ ->\ ""\ -\ Cuenta\ los\ nombres\ como\ vacio\ y\ su\ longitud\ es\ 0\r\n\ 8\ -\ Valores\ con\ minusculas\ y\ mayusculas\ -\ Lo\ pone\ todo\ en\ mayusculas\r\n\ 9\ -\ Valores\ con\ acentos\ -\ Respeta\ todos\ los\ acentos\ \r\n\r\n\ --Test\ getCriticalAge\ \ --\r\n\ 10\ -\ Edad\ menor\ de\ 18\ ->\ 18\ -\ Edad\r\n\ 11\ -\ Edad\ igual\ a\ 18\ ->\ 65-18\ \=47\r\n\ 12\ -\ Edad\ mayor\ de\ 18\ menor\ de\ 65\ ->\ 65\ -\ edad\r\n\ 13\ -\ Edad\ igual\ a\ 65\ ->0\r\n\ 14\ -\ Edad\ mayor\ de\ 65\ ->\ edad\ -\ 65\r\n\ @author\ \ Miguel\ Lozana\ \r\n\ @version\ (26/09/2025)\r\n\r\n
 comment1.params=
 comment1.target=void\ setBetweenLimitAgeTest()
 comment1.text=\r\n\ Comprueba\ que\ en\ el\ getAge(),\ si\ la\ edad\ esta\ entre\ los\ limites\ se\ modifica.\r\n
+comment10.params=
+comment10.target=void\ criticalAgeUnderAdulthood()
+comment10.text=\r\n\ Comprueba\ que\ si\ la\ edad\ es\ menor\ de\ 18,\ se\ cumple\:\ 18-Edad\r\n
+comment11.params=
+comment11.target=void\ criticalAgeAtAdulthood()
+comment11.text=\r\n\ Comprueba\ que\ si\ la\ edad\ es\ igual\ a\ 18,\ se\ cumple\:\ 65-18\ \=\ 47\r\n
+comment12.params=
+comment12.target=void\ criticalAgeAdultRange()
+comment12.text=\r\n\ Comprueba\ que\ si\ la\ edad\ es\ mayor\ que\ 18\ pero\ menor\ de\ 65,\ se\ cumple\:\ 65-edad\ \r\n
+comment13.params=
+comment13.target=void\ criticalAgeAtRetirement()
+comment13.text=\r\n\ Comprueba\ que\ si\ la\ edad\ es\ igual\ a\ 65,\ se\ cumple\:\ 65-65\ \=\ 0\r\n
+comment14.params=
+comment14.target=void\ criticalAgeOverRetirement()
 comment2.params=
 comment2.target=void\ setUnderLimitAgeTest()
 comment2.text=\r\n\ Comprueba\ que\ en\ el\ getAge(),\ si\ la\ edad\ esta\ por\ debajo\ del\ l\u00EDmite\ inferior\ se\ lanza\ una\ excepci\u00F3n.\ \r\n\ Para\ ello\ intenta\ asignarle\ un\ valor\ "incorrecto"\ al\ objeto,\ si\ lo\ consigue\ el\ test\ falla.\r\n
@@ -28,4 +42,4 @@ comment8.text=\r\n\ Comprueba\ que\ representa\ bien\ la\ cadena\ en\ un\ caso\ 
 comment9.params=
 comment9.target=void\ acentValue()
 comment9.text=\r\n\ Comprueba\ que\ representa\ bien\ la\ cadena\ en\ el\ caso\ de\ acentos\ y\ la\ letra\ \u00F1\ \r\n
-numComments=10
+numComments=15

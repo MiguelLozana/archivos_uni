@@ -12,7 +12,7 @@ public class Person {
     public final static boolean GENDER_FEMALE = false;
     public final static boolean GENDER_MALE = true;
     
-    private static String name; 
+    private String name; 
     private String surname;
     private int age;
     private boolean gender; //Genero masculino=true; false=femenino

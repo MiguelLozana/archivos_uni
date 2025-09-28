@@ -6,18 +6,25 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 /**
- * Escenarios de prueba 
+ * Escenarios de prueba del getAge()
  * 1 - Edad entre los límites - se modifica
  * 2 - Edad por debajo del limite inferior - excepcion
  * 3 - Edad por encima del limite superior - excepcion
  * 4 - Edad en limite inferior - excepcion
  * 5 - Edad en limite superior - excepcion
- * 
+ *
+ * -- Test getHashCode --
  * 6 - Valores normales - Cumple perfectamente
  * 7 - Valores con nombres vacios -> "" - Cuenta los nombres como vacio y su longitud es 0
  * 8 - Valores con minusculas y mayusculas - Lo pone todo en mayusculas
  * 9 - Valores con acentos - Respeta todos los acentos 
  *
+ * --Test getCriticalAge  --
+ * 10 - Edad menor de 18 -> 18 - Edad
+ * 11 - Edad igual a 18 -> 65-18 =47
+ * 12 - Edad mayor de 18 menor de 65 -> 65 - edad
+ * 13 - Edad igual a 65 ->0
+ * 14 - Edad mayor de 65 -> edad - 65
  * @author  Miguel Lozana 
  * @version (26/09/2025)
  *
@@ -95,7 +102,7 @@ public class PersonTest
     }
     
     
-
+    //Test de getHashCode
     /**
      * Comprueba que representa bien la cadena en un caso favorable
      */
@@ -127,6 +134,49 @@ public class PersonTest
     public void acentValue(){
         Person p1 = new Person("Mâríà","Müñoz",25,true);
         assertEquals("25-MÂRÍÀ-5-MÜÑOZ-5", p1.getHashCode());
+    }
+    
+    //TEST  de getCriticalAge
+    
+    /**
+     * Comprueba que si la edad es menor de 18, se cumple: 18-Edad
+     */
+    @Test
+    public void criticalAgeUnderAdulthood() {
+        Person p = new Person(10);
+        assertEquals(8, p.getCriticalAge()); 
+    }
+    /**
+     * Comprueba que si la edad es igual a 18, se cumple: 65-18 = 47
+     */
+    @Test
+    public void criticalAgeAtAdulthood() {
+        Person p = new Person(18);
+        assertEquals(47, p.getCriticalAge());
+    }
+    /**
+     * Comprueba que si la edad es mayor que 18 pero menor de 65, se cumple: 65-edad 
+     */
+    @Test
+    public void criticalAgeAdultRange() {
+        Person p = new Person(40);
+        assertEquals(25, p.getCriticalAge()); 
+    }
+    /**
+     * Comprueba que si la edad es igual a 65, se cumple: 65-65 = 0
+     */
+    @Test
+    public void criticalAgeAtRetirement() {
+        Person p = new Person(65);
+        assertEquals(0, p.getCriticalAge());
+    }
+    @Test
+    /**
+     * Comprueba que si la edad es mayor que 65, se cumple: Edad - 65 
+     */
+    public void criticalAgeOverRetirement() {
+        Person p = new Person(80);
+        assertEquals(15, p.getCriticalAge()); 
     }
 }
     
