@@ -142,41 +142,41 @@ public class PersonTest
      * Comprueba que si la edad es menor de 18, se cumple: 18-Edad
      */
     @Test
-    public void criticalAgeUnderAdulthood() {
-        Person p = new Person(10);
-        assertEquals(8, p.getCriticalAge()); 
+    public void underAdulthood() {
+        Person p1 = new Person(10);
+        assertEquals(8, p1.getCriticalAge()); 
     }
     /**
      * Comprueba que si la edad es igual a 18, se cumple: 65-18 = 47
      */
     @Test
-    public void criticalAgeAtAdulthood() {
-        Person p = new Person(18);
-        assertEquals(47, p.getCriticalAge());
+    public void atAdulthood() {
+        Person p1 = new Person(18);
+        assertEquals(47, p1.getCriticalAge());
     }
     /**
      * Comprueba que si la edad es mayor que 18 pero menor de 65, se cumple: 65-edad 
      */
     @Test
-    public void criticalAgeAdultRange() {
-        Person p = new Person(40);
-        assertEquals(25, p.getCriticalAge()); 
+    public void adultRange() {
+        Person p1 = new Person(40);
+        assertEquals(25, p1.getCriticalAge()); 
     }
     /**
      * Comprueba que si la edad es igual a 65, se cumple: 65-65 = 0
      */
     @Test
-    public void criticalAgeAtRetirement() {
-        Person p = new Person(65);
-        assertEquals(0, p.getCriticalAge());
+    public void atRetirement() {
+        Person p1 = new Person(65);
+        assertEquals(0, p1.getCriticalAge());
     }
     @Test
     /**
      * Comprueba que si la edad es mayor que 65, se cumple: Edad - 65 
      */
-    public void criticalAgeOverRetirement() {
-        Person p = new Person(80);
-        assertEquals(15, p.getCriticalAge()); 
+    public void overRetirement() {
+        Person p1= new Person(80);
+        assertEquals(15, p1.getCriticalAge()); 
     }
 }
     

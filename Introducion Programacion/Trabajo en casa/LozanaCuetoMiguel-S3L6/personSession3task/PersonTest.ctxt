@@ -5,19 +5,19 @@ comment1.params=
 comment1.target=void\ setBetweenLimitAgeTest()
 comment1.text=\r\n\ Comprueba\ que\ en\ el\ getAge(),\ si\ la\ edad\ esta\ entre\ los\ limites\ se\ modifica.\r\n
 comment10.params=
-comment10.target=void\ criticalAgeUnderAdulthood()
+comment10.target=void\ underAdulthood()
 comment10.text=\r\n\ Comprueba\ que\ si\ la\ edad\ es\ menor\ de\ 18,\ se\ cumple\:\ 18-Edad\r\n
 comment11.params=
-comment11.target=void\ criticalAgeAtAdulthood()
+comment11.target=void\ atAdulthood()
 comment11.text=\r\n\ Comprueba\ que\ si\ la\ edad\ es\ igual\ a\ 18,\ se\ cumple\:\ 65-18\ \=\ 47\r\n
 comment12.params=
-comment12.target=void\ criticalAgeAdultRange()
+comment12.target=void\ adultRange()
 comment12.text=\r\n\ Comprueba\ que\ si\ la\ edad\ es\ mayor\ que\ 18\ pero\ menor\ de\ 65,\ se\ cumple\:\ 65-edad\ \r\n
 comment13.params=
-comment13.target=void\ criticalAgeAtRetirement()
+comment13.target=void\ atRetirement()
 comment13.text=\r\n\ Comprueba\ que\ si\ la\ edad\ es\ igual\ a\ 65,\ se\ cumple\:\ 65-65\ \=\ 0\r\n
 comment14.params=
-comment14.target=void\ criticalAgeOverRetirement()
+comment14.target=void\ overRetirement()
 comment2.params=
 comment2.target=void\ setUnderLimitAgeTest()
 comment2.text=\r\n\ Comprueba\ que\ en\ el\ getAge(),\ si\ la\ edad\ esta\ por\ debajo\ del\ l\u00EDmite\ inferior\ se\ lanza\ una\ excepci\u00F3n.\ \r\n\ Para\ ello\ intenta\ asignarle\ un\ valor\ "incorrecto"\ al\ objeto,\ si\ lo\ consigue\ el\ test\ falla.\r\n
