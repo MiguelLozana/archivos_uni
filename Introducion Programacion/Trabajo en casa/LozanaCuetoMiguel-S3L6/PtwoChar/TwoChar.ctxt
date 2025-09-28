@@ -1,10 +1,10 @@
 #BlueJ class context
 comment0.target=TwoChar
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ TwoChar\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ \r\n\ \r\n\ @author\ Miguel\ Lozana\ \r\n\ @version\ 27/09/2025\ \r\n
 comment1.params=
 comment1.target=TwoChar()
 comment1.text=\r\n\ Constructor\ vacio\r\n
 comment2.params=str\ index
 comment2.target=java.lang.String\ twoChar(java.lang.String,\ int)
-comment2.text=\r\n\ A\ partir\ de\ una\ cadena\ y\ un\ indice\ devuelve\ una\ cadena\ de\ lonitud\ 2\r\n\ @param\ str,\ string\ de\ donde\ hay\ que\ sacar\ la\ subcaneda\r\n\ @param\ index,\ int\ de\ donde\ empezar\ a\ sacar\ la\ subcadena\r\n\ @return\ String\ la\ cadena\ de\ dos\ caracteres\ \r\n
+comment2.text=\r\n\ A\ partir\ de\ una\ cadena\ y\ un\ indice\ devuelve\ una\ cadena\ de\ lonitud\ 2\r\n\ @param\ str,\ string\ de\ donde\ hay\ que\ sacar\ la\ subcaneda\r\n\ @param\ index,\ int\ de\ donde\ empezar\ a\ sacar\ la\ subcadena\r\n\ @return\ String\ Cadena\ de\ dos\ caracteres\ \r\n
 numComments=3

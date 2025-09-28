@@ -170,7 +170,7 @@ public class TreeTest
     }
      @Test
     /**
-     *Comprueba que el metodo harvest() pone a 0 las furtas y dice cuantas habia (0).
+     *Comprueba que el metodo harvest() pone a 0 las frutas y dice cuantas habia (0).
      */
     public void harvestFruitIsCero(){
         Tree t1= new Tree(5,0);
