@@ -179,12 +179,3 @@ public class PersonTest
         assertEquals(15, p1.getCriticalAge()); 
     }
 }
-    
-//tarea semana que viene 
-
-
-
-
-
-// implementar en plane un metodo fly() publico, sin parametros, debuelve bollean
-// so fuel=0 false, si else, fuel -1 true

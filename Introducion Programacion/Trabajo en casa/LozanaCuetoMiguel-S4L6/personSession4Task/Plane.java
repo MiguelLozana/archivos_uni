@@ -43,6 +43,14 @@ public class Plane
     public Plane(Person pilot){
         this(pilot,DEFAULT_ID, DEFAULT_FUEL);
     }
+    /**
+     * Constructor de la clase plane pero con fuel como parametro
+     * @param fuel combustible asignado al avion
+     */
+    public Plane(int fuel){
+        this(null,DEFAULT_ID, fuel);
+    }
+    
    
     //SETTERS    
     /**
@@ -116,5 +124,17 @@ public class Plane
 
         return this.identifier + "-" + this.fuel + "-" + stringPilot;
 
+    }
+    /**
+     * Comprueba si el avion puede volar, si tiene combustible devuelve true (vuela) y consume 1, sino devuelve false (no puede volar)
+     *@return boolean True si tiene combustible, false si no tiene
+     */
+    public boolean fly(){
+        if (fuel>0){
+           fuel = fuel - 1;
+            return true;
+        } else {
+            return false;
+        } 
     }
 }

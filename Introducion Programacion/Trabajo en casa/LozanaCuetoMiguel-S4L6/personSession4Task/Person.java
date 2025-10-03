@@ -153,17 +153,30 @@ public class Person {
     /**
      * Debuelve una cadena con informacion en el siguente formato. 
      * Edad-NOMBRE-longitudDelNombre-apellido-longitudDelApellido
-     * ejemplo:44-FERNANDO-8-ALONSO-6 
+     * ejemplo:44-FE-ALVA-ADULT 
      */
     public String getHashCode(){
         checkParam(name != null || surname!=null, "Los atributos name o surname son nulos");
-        return(age+"-"+this.name.toUpperCase()+"-"+
-                       this.name.length()+"-"+
-                       this.surname.toUpperCase()+"-"+
-                       this.surname.length());
+        String stringName = this.name.substring(0,1);
+        String stringSurname = this.surname.substring(0,3);
+        
+        return(age+"-"+
+               stringName.toUpperCase()+"-"+
+               stringSurname.toUpperCase()+"-"+
+               this.ageClasifier());
     }
     
-    
+    private String ageClasifier(){
+        if (age <ADULTHOOD_AGE){
+            return "CHILD";
+        } else {
+            if (age<RETIREMENT_AGE){
+                return "ADULT";
+            } else{
+                return "RETIRED";
+            }
+        }
+    }
     
     /**
      * Comprueba si un parámetro tiene sentido dentro del campo correspondiente, en caso contrario corta la ejecucion y muestra un mensaje
