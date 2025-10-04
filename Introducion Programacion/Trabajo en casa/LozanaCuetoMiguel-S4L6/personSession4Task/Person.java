@@ -157,8 +157,9 @@ public class Person {
      */
     public String getHashCode(){
         checkParam(name != null || surname!=null, "Los atributos name o surname son nulos");
-        String stringName = this.name.substring(0,1);
-        String stringSurname = this.surname.substring(0,3);
+        
+        String stringName = this.name.substring(0,2);
+        String stringSurname = this.surname.substring(0,4);
         
         return(age+"-"+
                stringName.toUpperCase()+"-"+

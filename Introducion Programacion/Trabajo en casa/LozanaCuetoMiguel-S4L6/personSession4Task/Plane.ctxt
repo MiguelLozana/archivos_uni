@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Plane
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Plane\ here.\r\n\ \r\n\ @author\ Miguel\ Lozana\ CUeto\ \r\n\ @version\ 02/10/2025\r\n
+comment0.text=\r\n\ Estructura\ del\ codigo\:\r\n\ \r\n\ Constatantes\r\n\ Variables\r\n\ \r\n\ Contructores\ (4)\r\n\ \r\n\ Setters\ (3)\r\n\ Getters\ (3)\r\n\ \r\n\ metodo\ checkPram\r\n\ metodo\ toSring\r\n\ metodo\ fly\r\n
 comment1.params=pilot\ identifier\ fuel
 comment1.target=Plane(Person,\ char,\ int)
 comment1.text=\r\n\ Constructor\ por\ defecto\ de\ la\ clase\ plane\r\n\ @param\ pilot\ Piloto\ asignado\ al\ avion\r\n\ \ @param\ identifier\ identificador\ del\ avi\u00F3n\ con\ un\ caracter\ \r\n\ \ @param\ fuel\ cantidad\ de\ combustible\ del\ avi\u00F3n\r\n

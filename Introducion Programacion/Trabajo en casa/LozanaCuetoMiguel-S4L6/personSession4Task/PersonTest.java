@@ -91,9 +91,10 @@ public class PersonTest
     
     /**-- Test getHashCode --
      * 6 - Valores normales - Cumple perfectamente
-     * 7 - Valores con nombres vacios -> "" - Cuenta los nombres como vacio y su longitud es 0
-     * 8 - Valores con minusculas y mayusculas - Lo pone todo en mayusculas
-     * 9 - Valores con acentos - Respeta todos los acentos 
+     * 7 - Valores con nombre null -> runtimeException en name
+     * 7 - Valores con apellido null -> runtimeException en apellido
+     * 8 - Valores con nombre y apellido null -> runtimeException en name
+     * 8 - Valores con logitud 1 -> 
      *
      */
     
@@ -103,31 +104,61 @@ public class PersonTest
     @Test
     public void normalValue(){
         Person p1 = new Person("Pedro","Picapiedra",25,true);
-        assertEquals("25-PEDRO-5-PICAPIEDRA-10", p1.getHashCode());
+        assertEquals("25-PE-PICA-ADULT", p1.getHashCode());
     }
     /**
-     * Comprueba que representa bien la cadena en un caso en el que el nombre y apellido esta vacio
+     * Comprueba que representa bien la cadena en un caso donde name es null
      */
     @Test
-    public void withoutValue(){
-        Person p1 = new Person("","",25,true);
-        assertEquals("25--0--0", p1.getHashCode());
+    public void nameIsNullValue(){
+        
+        try {
+            Person p1 = new Person(null,"picapiedra",25,true);
+            fail("Se esperaba excepción");
+        }   
+        catch (RuntimeException excepcion) {
+            assertEquals("Nombre Ilegal", excepcion.getMessage());
+        } 
     }
     /**
-     * Comprueba que representa bien la cadena en un caso en el que se mezclan mayusculas y mincusculas
+     * Comprueba que representa bien la cadena en un caso donde surname es null
      */
     @Test
-    public void uppeAndLowercaseValue(){
-        Person p1 = new Person("PeDrO","PicAPiedrA",25,true);
-        assertEquals("25-PEDRO-5-PICAPIEDRA-10", p1.getHashCode());
+    public void surnameIsNullValue(){
+        
+        try {
+            Person p1 = new Person("picapiedra",null,25,true);
+            fail("Se esperaba excepción");
+        }   
+        catch (RuntimeException excepcion) {
+            assertEquals("Apellido Ilegal", excepcion.getMessage());
+        } 
     }
     /**
-     * Comprueba que representa bien la cadena en el caso de acentos y la letra ñ 
+     * Comprueba que representa bien la cadena en un caso donde name y surname es null
      */
     @Test
-    public void acentValue(){
-        Person p1 = new Person("Mâríà","Müñoz",25,true);
-        assertEquals("25-MÂRÍÀ-5-MÜÑOZ-5", p1.getHashCode());
+    public void nameAndSurnameIsNullValue(){
+        
+        try {
+            Person p1 = new Person(null,null,25,true);
+            fail("Se esperaba excepción");
+        }   
+        catch (RuntimeException excepcion) {
+            assertEquals("Nombre Ilegal", excepcion.getMessage());
+        } 
+    }
+    /**
+     * Comprueba que representa bien la cadena en un caso donde name y surname es null
+     */
+    @Test
+    public void lengthIsLowerThanExpected(){
+        try{
+            Person p1 = new Person("A","AB",25,true);
+        }catch (runtimeException re) {
+            assertEquals(p1.getHashCode(), re.getException());
+        
+        }
     }
     
     /**--Test getCriticalAge  --

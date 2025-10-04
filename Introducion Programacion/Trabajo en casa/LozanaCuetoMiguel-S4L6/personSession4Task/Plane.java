@@ -1,9 +1,25 @@
 
 /**
- * Write a description of class Plane here.
+ * Modela un avion en base a un piloto, un identificador y un nivel de gasolina
  * 
  * @author Miguel Lozana CUeto 
  * @version 02/10/2025
+ */
+
+/**
+ * Estructura del codigo:
+ * 
+ * Constatantes
+ * Variables
+ * 
+ * Contructores (4)
+ * 
+ * Setters (3)
+ * Getters (3)
+ * 
+ * metodo checkPram
+ * metodo toSring
+ * metodo fly
  */
 public class Plane
 {
@@ -98,6 +114,8 @@ public class Plane
     public int getFuel(){
         return this.fuel;
     }
+    
+    
     
     /**
      * Comprueba si un parámetro tiene sentido dentro del campo correspondiente, en caso contrario corta la ejecucion y muestra un mensaje

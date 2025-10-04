@@ -1,14 +1,14 @@
 #BlueJ package file
-dependency1.from=Plane
-dependency1.to=Person
+dependency1.from=PlaneTest
+dependency1.to=Plane
 dependency1.type=UsesDependency
-dependency2.from=PersonTest
+dependency2.from=PlaneTest
 dependency2.to=Person
 dependency2.type=UsesDependency
-dependency3.from=PlaneTest
-dependency3.to=Plane
+dependency3.from=Plane
+dependency3.to=Person
 dependency3.type=UsesDependency
-dependency4.from=PlaneTest
+dependency4.from=PersonTest
 dependency4.to=Person
 dependency4.type=UsesDependency
 editor.fx.0.height=822
