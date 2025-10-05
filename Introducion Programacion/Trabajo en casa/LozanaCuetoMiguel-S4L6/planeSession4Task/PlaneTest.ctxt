@@ -1,0 +1,31 @@
+#BlueJ class context
+comment0.target=PlaneTest
+comment0.text=\r\n\ The\ test\ class\ PlaneTest.\r\n\r\n\ @author\ \ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=void\ constructorWithoutParams()
+comment1.text=\r\n\ 1\ -\ Test\ del\ constructor\ sin\ parametros\ que\ deberia\ dar\ los\ valores\ por\ defecto,\ SIN\ piloto,\ id\:\ A\ y\ combustible\ 0\r\n
+comment2.params=
+comment2.target=void\ constructorWithPilotParam()
+comment2.text=\r\n\ 2\ -\ Test\ del\ constructor\ sin\ parametros\ que\ deberia\ dar,\ piloto\:\ Fernando\ ,\ id\:\ A\ y\ combustible\ 0\r\n
+comment3.params=
+comment3.target=void\ constructorWithIdParam()
+comment3.text=\r\n\ 3\ -\ Test\ del\ constructor\ sin\ parametros\ que\ deberia\ dar,\ SIN\ piloto,\ id\:\ E\ y\ combustible\ 0\r\n
+comment4.params=
+comment4.target=void\ constructorWithFuelParam()
+comment4.text=\r\n\ 4\ -\ Test\ del\ constructor\ sin\ parametros\ que\ deberia\ dar,\ SIN\ piloto,\ id\:\ A\ y\ combustible\ 50\r\n
+comment5.params=
+comment5.target=void\ defaultValue()
+comment5.text=\r\n\ 5\ -\ Test\ para\ valores\ por\ defecto\ (null,A,0),\ deber\u00EDa\ devolver\ "A-0-NO-PILOT"\r\n
+comment6.params=
+comment6.target=void\ withPilotValue()
+comment6.text=\r\n\ 6\ -\ Test\ para\ valores\ a\u00F1adiendo\ a\ un\ Piloto\ (Jose,A,0)\ deber\u00EDa\ devolver\ "A-0-Jose"\r\n
+comment7.params=
+comment7.target=void\ otherFuelOrId()
+comment7.text=\r\n\ 7\ -\ Test\ para\ valores\ a\u00F1adiendo\ a\ un\ Piloto\ (Jose,A,0)\ deber\u00EDa\ devolver\ "A-0-Jose"\r\n
+comment8.params=
+comment8.target=void\ withoutFuel()
+comment8.text=\r\n\ 8\ -\ Test\ sin\ combustible\r\n
+comment9.params=
+comment9.target=void\ withFuel()
+comment9.text=\r\n\ 9\ -\ Test\ con\ fuel\=5,\ devuevlve\ ture\ y\ el\ fuel\ baja\ a\ 4\r\n
+numComments=10

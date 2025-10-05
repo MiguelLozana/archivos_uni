@@ -148,8 +148,8 @@ public class Person {
      * @return string con el formato Ej: 44-FE-ALVA-ADULT 
      */
     public String getHashCode(){
-        String stringName = shorterString(this.name, DEFAULT_INIT_INDEX, MIN_NAME_LENGTH);
-        String stringSurname = shorterString(this.surname, DEFAULT_INIT_INDEX, MIN_SURNAME_LENGTH);
+        String stringName = shortenString(this.name, DEFAULT_INIT_INDEX, MIN_NAME_LENGTH);
+        String stringSurname = shortenString(this.surname, DEFAULT_INIT_INDEX, MIN_SURNAME_LENGTH);
         return(this.age+"-"+
                stringName.toUpperCase()+"-"+
                stringSurname.toUpperCase()+"-"+
@@ -207,7 +207,7 @@ public class Person {
      * @param finalIndex Valor final para obtener la subcadena
      * @return String Subcadena en fuicnion a los parametros
      */
-    public String shorterString(String cadena, int initIndex, int finalIndex){
+    public String shortenString(String cadena, int initIndex, int finalIndex){
         checkParam(initIndex<finalIndex, "El indice inicial (segundo parametro) ha de ser menor al indice final(tercer parametro)");
         int length = finalIndex-initIndex;
         checkParam(cadena.length()>=length, "La longitud de la cadena es demasiado corta");

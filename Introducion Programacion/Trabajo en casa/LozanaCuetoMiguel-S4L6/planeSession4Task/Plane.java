@@ -1,11 +1,3 @@
-
-/**
- * Modela un avion en base a un piloto, un identificador y un nivel de gasolina
- * 
- * @author Miguel Lozana CUeto 
- * @version 02/10/2025
- */
-
 /**
  * Estructura del codigo:
  * 
@@ -21,18 +13,28 @@
  * metodo toSring
  * metodo fly
  */
+
+/**
+ * Modela un avion en base a un piloto, un identificador y un nivel de gasolina
+ * 
+ * @author Miguel Lozana CUeto 
+ * @version 02/10/2025
+ */
+
+
+
 public class Plane
 {
     //Declaramos las contantes, en este caso valores por defecto
     public static final int MIN_FUEL = 0;
     public static final char DEFAULT_ID = 'A';
     public static final int DEFAULT_FUEL= 0;
-    
+
     //Declaramos los atributos
     private Person pilot;
     private char identifier;
     private int fuel;
-    
+
     /**
      * Constructor por defecto de la clase plane
      * @param pilot Piloto asignado al avion
@@ -45,13 +47,13 @@ public class Plane
         setIdentifier(identifier);
         setFuel(fuel);
     }
-    
     /**
      * Constructor de la clase plane pero con piloto = null
      */
     public Plane(){
         this(null,DEFAULT_ID,DEFAULT_FUEL);
     }
+
     /**
      * Constructor de la clase plane pero con piloto como parametro
      * @param pilot piloto asignado al avion
@@ -60,14 +62,23 @@ public class Plane
         this(pilot,DEFAULT_ID, DEFAULT_FUEL);
     }
     /**
+     * Constructor de la clase plane pero con identifier como parametro
+     * @param fuel combustible asignado al avion
+     */
+    public Plane(char identifier){
+        this(null,identifier, DEFAULT_FUEL);
+    }
+    /**
      * Constructor de la clase plane pero con fuel como parametro
      * @param fuel combustible asignado al avion
      */
     public Plane(int fuel){
         this(null,DEFAULT_ID, fuel);
     }
+
     
-   
+    
+    
     //SETTERS    
     /**
      * Establece el valor de pilot
@@ -76,6 +87,7 @@ public class Plane
     private void setPilot(Person pilot){
         this.pilot=pilot;
     }
+
     /**
      * Establece el valor de identifier
      * @param identifier el nuevo valor para el atributo identifier
@@ -83,6 +95,7 @@ public class Plane
     private void setIdentifier(char identifier){
         this.identifier=identifier;
     }
+
     /**
      * Establece el valor de fuel
      * @param fuel el nuevo valor para el atributo fuel
@@ -91,7 +104,7 @@ public class Plane
         checkParam(fuel>=MIN_FUEL , "Combustible no puede ser menor que 0");
         this.fuel = fuel;
     }
-    
+
     //GETTERS
     /**
      * Devuelve el atributo pilot 
@@ -114,7 +127,35 @@ public class Plane
     public int getFuel(){
         return this.fuel;
     }
+
     
+    
+    /**
+     * Crea una representación de la información del objeto con el siguiente formato: identificador-gasolina-piloto
+     * @return Devuelve la String con el formato anterior 
+     */
+    public String toString(){
+        String stringPilot ="NO-PILOT";
+        if (this.pilot !=null){
+            stringPilot = this.pilot.getName();
+        }
+
+
+        return this.identifier + "-" + this.fuel + "-" + stringPilot;
+
+    }
+    /**
+     * Comprueba si el avion puede volar, si tiene combustible devuelve true (vuela) y consume 1, sino devuelve false (no puede volar)
+     *@return boolean True si tiene combustible, false si no tiene
+     */
+    public boolean fly(){
+        if (fuel>0){
+            fuel = fuel - 1;
+            return true;
+        } else {
+            return false;
+        } 
+    }
     
     
     /**
@@ -127,32 +168,5 @@ public class Plane
             throw new RuntimeException(message);
         }
     }
-    
-    /**
-     * Crea una representación de la información del objeto con el siguiente formato: identificador-gasolina-piloto
-     * @return Devuelve la String con el formato anterior 
-     */
-    public String toString(){
-        String stringPilot ="NO-PILOT";
-        if (this.pilot !=null){
-            stringPilot = this.pilot.getName();
-        }
-        
-        
 
-        return this.identifier + "-" + this.fuel + "-" + stringPilot;
-
-    }
-    /**
-     * Comprueba si el avion puede volar, si tiene combustible devuelve true (vuela) y consume 1, sino devuelve false (no puede volar)
-     *@return boolean True si tiene combustible, false si no tiene
-     */
-    public boolean fly(){
-        if (fuel>0){
-           fuel = fuel - 1;
-            return true;
-        } else {
-            return false;
-        } 
-    }
 }

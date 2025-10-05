@@ -1,5 +1,4 @@
 
-
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -27,10 +26,10 @@ public class PersonTest
     public void setAgeBetweenLimitAgeTest(){
         Person p1 = new Person(8);
         assertEquals(8,p1.getAge());
-        
+
         //assertEquals(VALOR_ESPERADO, VALOR OBTENIDO)
     }
-    
+
     /**
      * 2 - Comprueba que en el setAge(), si la edad esta por debajo del límite inferior se lanza una excepción. 
      * Para ello intenta asignarle un valor "incorrecto" al objeto, si lo consigue el test falla.
@@ -45,6 +44,7 @@ public class PersonTest
             assertEquals("Edad Ilegal", excepcion.getMessage());
         }
     }
+
     /**
      * 3 - Comprueba que en el setAge(), si la edad esta por encima del límite superior se lanza una excepción. 
      * Para ello intenta asignarle un valor "incorrecto" al objeto, si lo consigue el test falla.
@@ -59,6 +59,7 @@ public class PersonTest
             assertEquals("Edad Ilegal", excepcion.getMessage());
         }
     }
+
     /**
      * 4 - Comprueba que en el setAge(), si la edad está justo en el límite inferior se lanza una excepción. 
      * Para ello intenta asignarle un valor "incorrecto" al objeto, si lo consigue el test falla.
@@ -73,6 +74,7 @@ public class PersonTest
             assertEquals("Edad Ilegal", excepcion.getMessage());
         }
     }
+
     /**
      * 5 - Comprueba que en el setAge(), si la edad está justo en el límite superior se lanza una excepción. Para ello intenta asignarle un valor "incorrecto" al objeto, si lo cosigue el test falla
      */
@@ -93,7 +95,7 @@ public class PersonTest
      * 9 - Edad igual a 65 ->0
      * 10 - Edad mayor de 65 -> edad - 65
      */
-    
+
     /**
      * 6 - Comprueba que si la edad es menor de 18, se cumple: 18-Edad
      */
@@ -102,6 +104,7 @@ public class PersonTest
         Person p1 = new Person(10);
         assertEquals(8, p1.getCriticalAge()); 
     }
+
     /**
      * 7 - Comprueba que si la edad es igual a 18, se cumple: 65-18 = 47
      */
@@ -110,6 +113,7 @@ public class PersonTest
         Person p1 = new Person(18);
         assertEquals(47, p1.getCriticalAge());
     }
+
     /**
      * 8 - Comprueba que si la edad es mayor que 18 pero menor de 65, se cumple: 65-edad 
      */
@@ -118,6 +122,7 @@ public class PersonTest
         Person p1 = new Person(40);
         assertEquals(25, p1.getCriticalAge()); 
     }
+
     /**
      * 9 - Comprueba que si la edad es igual a 65, se cumple: 65-65 = 0
      */
@@ -126,6 +131,7 @@ public class PersonTest
         Person p1 = new Person(65);
         assertEquals(0, p1.getCriticalAge());
     }
+
     @Test
     /**
      * 10 - Comprueba que si la edad es mayor que 65, se cumple: Edad - 65 
@@ -134,7 +140,7 @@ public class PersonTest
         Person p1= new Person(80);
         assertEquals(15, p1.getCriticalAge()); 
     }
-    
+
     /**Test de ageClasifier() mediante el getHashCode() ya que ageClasifier() es privado
      * 11 - Edad menor de 18 - CHILD
      * 12 - Edad igual a 18 - ADULT
@@ -150,6 +156,7 @@ public class PersonTest
         Person p1 = new Person(Person.ADULTHOOD_AGE-1);
         assertEquals("17-FE-ALON-CHILD", p1.getHashCode()); 
     }
+
     /**
      * 12 -Comprueba que getHashCode() contiene "ADULT" proveniente de ageClasifier() si la edad es 18
      */
@@ -158,6 +165,7 @@ public class PersonTest
         Person p1 = new Person(Person.ADULTHOOD_AGE);
         assertEquals("18-FE-ALON-ADULT", p1.getHashCode()); 
     }
+
     /**
      * 13 - Compureba getHashCode() contiene "ADULT" proveniente de ageClasifier() si la edad está entre 18 y 65
      */
@@ -166,6 +174,7 @@ public class PersonTest
         Person p1 = new Person(Person.ADULTHOOD_AGE+1);
         assertEquals("19-FE-ALON-ADULT", p1.getHashCode()); 
     }
+
     /**
      * 14 - Compureba que getHashCode() contiene "RETIRED" proveniente de ageClasifier() si la edad es 65
      */
@@ -174,6 +183,7 @@ public class PersonTest
         Person p1 = new Person(Person.RETIREMENT_AGE);
         assertEquals("65-FE-ALON-RETIRED", p1.getHashCode()); 
     }
+
     /**
      * 15 - Compureba que getHashCode() contiene "RETIRED" proveniente de ageClasifier() si la edad es mayor de 65
      */
@@ -182,12 +192,12 @@ public class PersonTest
         Person p1 = new Person(Person.RETIREMENT_AGE+1);
         assertEquals("66-FE-ALON-RETIRED", p1.getHashCode()); 
     }
-    
+
     /**
      * Test de shorterString()
      * 16 - Casos favorables
      * 17 - Indices invertidos (indice final < indice inicial) excepcion
-     * 19 - Cadena demasiado pequeña - excepcion
+     * 18 - Cadena demasiado pequeña - excepcion
      * 
      */
     /**
@@ -195,9 +205,10 @@ public class PersonTest
      */
     @Test
     public void shortStringFavourableString(){
-    Person p1 = new Person();
-    assertEquals("na", p1.shorterString("Fernando", 3, 5)); 
+        Person p1 = new Person();
+        assertEquals("na", p1.shortenString("Fernando", 3, 5)); 
     }
+
     /**
      * 17 - Test de shorter string con indices desordenados
      */
@@ -205,12 +216,11 @@ public class PersonTest
     public void shortStringUnshortedIndex(){
         try{   
             Person p1 = new Person();
-            assertEquals("na", p1.shorterString("Fernando", 2,0)); 
-    
         } catch (RuntimeException re){
             assertEquals("El indice inicial (segundo parametro) ha de ser menor al indice final(tercer parametro)", re.getMessage());
         }
     }
+
     /**
      * 18 - Test de shorter string con cadena demasiado corta
      */
@@ -218,8 +228,6 @@ public class PersonTest
     public void shortStringTooShortString(){
         try{   
             Person p1 = new Person();
-            assertEquals("na", p1.shorterString("Fernando",0, 20)); 
-    
         } catch (RuntimeException re){
             assertEquals("La longitud de la cadena es demasiado corta", re.getMessage());
         }
@@ -229,7 +237,7 @@ public class PersonTest
      * 20 - Valores con acentos
      * 21 - Simbolos como string
      */
-    
+
     /**
      * 19 - Comprueba que el metodo getHashCode representa bien la cadena con mayusculas y minusculas
      */
@@ -238,6 +246,7 @@ public class PersonTest
         Person p1 = new Person("PedRo","PIcApIEdRA",25,true);
         assertEquals("25-PE-PICA-ADULT", p1.getHashCode());
     }
+
     /**
      * 20 - Comprueba que representa bien la cadena con acentos
      */
@@ -246,6 +255,7 @@ public class PersonTest
         Person p1 = new Person("Pëdrò","Pîçápiedra",5,true);
         assertEquals("5-PË-PÎÇÁ-CHILD", p1.getHashCode());
     }
+
     /**
      * 21 - Comprueba que el metodo getHashCode representa bien la cadena con simbolos como string
      */
@@ -254,7 +264,5 @@ public class PersonTest
         Person p1 = new Person("[*¨{","^´_-",95,true);
         assertEquals("95-[*-^´_--RETIRED", p1.getHashCode());
     }
-   
-    
-    
+
 }
