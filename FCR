@@ -1,34 +1,31 @@
-int main() {
-	CheckPassword_T6();
-	return 0;
-}
 void CheckPassword_T6() {
-	
+	char password1[20];
+	char password2[20];
 	//Se pide el valor del primer vector y se almacena es password1
-	cout << "Dime la contraseña 1";
-	cin >> password1;
+	std::cout << "Dime la contraseña 1";
+	std::cin >> password1;
 	int lenght1 = strlen(password1);
 
 	//Comprobamos que la longitud no sea menor a 10 y que las posciones 0 y 3 son distintas
 	//Recordemoos ID:313840 -> ID[5] = 0 -> ID[2] = 3
 
 	if (strlen(password1) < 10 || password[0] != password[3]) {
-		cout << "Intruso Detectado";
-		exit();
+		std::cout << "Intruso Detectado";
+		exit;
 	}
 
 
 
 
 	//Se pide el valor del segundo vector y se almacena es password2
-	cout << "Dime la contraseña 2";
-	cin >> password2;
+	std::cout << "Dime la contraseña 2";
+	std::cin >> password2;
 
 	//Comprobamos que la segunda cadena sea "yumBwE"
 	if (strcmp(password2, "yumBwE") != 0) {
-		cout << "El acceso no fue correcto";
-			exit();
+		std::cout << "El acceso no fue correcto";
+		exit;
 	}
 
-	cout << "Acceso permitido"
+	std::cout << "Acceso permitido";
 }
